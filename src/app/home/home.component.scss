@@ -1,0 +1,26 @@
+.btn-cart {
+    border-radius: 18px;
+    background-color: var(--orange);
+}
+
+.navbar-brand{
+color:  var(--orange);
+}
+
+.card {
+    margin-top: 1rem;
+}
+
+.cart-badge {
+    height: 18px;
+    width: 18px;
+    border-radius: 18px;
+    background-color: red;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    right: 0px;
+    top: 0px;
+}

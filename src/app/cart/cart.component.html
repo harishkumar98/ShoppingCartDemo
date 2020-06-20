@@ -1,0 +1,21 @@
+<h4 style="text-align: center;">Cart Items</h4>
+<hr>
+<div class="container" *ngIf="size !== 0 else empty">
+    <div class="row" >
+        <div class="col-xs-12" >
+            <ul class="list-group">
+                    <a class="list-group-item" 
+                        style="cursor: pointer; text-decoration: none;"
+                        *ngFor="let item of myItems" routerLink="/" >
+                    {{item.name}} ({{(item.price-(item.price*(item.discount/100))) | currency:'INR'}}) <span class="pull-right" style="padding-left: 100px;"><img src={{item.img_url}} alt="item.name" style="max-height: 50px;"></span></a>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+<ng-template #empty>
+    <h5>Cart is Empty</h5>
+    <a routerLink = "/" style="cursor: pointer; text-decoration: none;">Go Back</a>
+</ng-template>
+
+
